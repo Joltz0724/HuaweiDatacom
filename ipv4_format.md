@@ -18,24 +18,32 @@ Total Length（总长度）：
 - 代表整个 ip 包的总长度，报文最大为 2^16 - 1 = 65535 Byte
 - 数据是通过识别出每个报文的长度字段去进行封装和解封装的。
 
-Identification：
+Identification（标识）
+- 16 bit
 
+Flags（标志位）
+- 3 bit
 
-Flags：
-
-
-Fragment：
+Fragment（片偏移）
+- 12 bit
 
 TTL（生存时间）
+- 8 bit
 
 Protocol（协议）
+- 8 bit
 
 Header Checksum（头部校验和）
+- 16 bit
 
 Source IP（源 IP）
+- 32 bit
 
 Destination IP（目标 IP）
+- 32 bit
 
 Options（选项）
+- 可变
 
-Padding（）
+Padding（填充）
+- 可变
