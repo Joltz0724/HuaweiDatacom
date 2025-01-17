@@ -32,4 +32,13 @@ MAC 地址表的老化时间缺省 300s，交换机每次接收到数据帧，�
 
 在二层网络中，若出现环路，MAC 地址表不断的震荡，交换机在不同接口反复学习新的 MAC 地址表，则会导致网络的波动。
 
-# 交换机如何区分 Ethernet
+**交换机如何区分 Ethernet Ⅱ 和 IEEE 802.3**
+
+从 Type/Length 字段值可以区分两种帧类型：
+
+- 当Type字段值小于等于1500（0x05DC）时，帧使用的是 IEEE 802.3 格式。
+- 当Type字段值大于等于1536（0x0600）时，帧使用的是 Ethernet II 格式。
+
+Ethernet Ⅱ 和 IEEE 802.3 的使用场景
+- 一般用户应用程序产生数据 是通过 Ethernet Ⅱ 格式封装，ftp，http, telnet。
+- 一般用于网络运行的协议类数据 是通过 IEEE 802.3 格式封装，比如 ISIS, CDP, PVST+，VTP ,STP
