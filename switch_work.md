@@ -39,6 +39,6 @@ MAC 地址表的老化时间缺省 300s，交换机每次接收到数据帧，�
 - 当 Type 字段值小于等于 1500（0x05DC）时，帧使用的是 IEEE 802.3 格式。
 - 当 Type 字段值大于等于 1536（0x0600）时，帧使用的是 Ethernet II 格式。
 
-Ethernet Ⅱ 和 IEEE 802.3 的使用场景
+Ethernet Ⅱ 和 IEEE 802.3 的使用场景：
 - 一般用户应用程序产生数据是通过 Ethernet Ⅱ 格式封装，比如 ftp、http、telnet
 - 一般用于网络运行的协议类数据是通过 IEEE 802.3 格式封装，比如 ISIS、CDP、PVST、VTP、STP
